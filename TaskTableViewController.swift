@@ -26,9 +26,11 @@ class TaskTableViewController: UITableViewController {
     
     @IBAction func AddButtonAction(_ sender: Any) {
         let alert = UIAlertController(title: "Новая задача", message: "", preferredStyle: .alert)
+        
         alert.addTextField { textField in
             textField.placeholder = "Что нужно сдлевлать?"
         }
+        
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {[weak self] action in
             guard let textfield = alert.textFields?.first else {return}
             let task = Task(name: textfield.text ?? "Отдохнуть")
