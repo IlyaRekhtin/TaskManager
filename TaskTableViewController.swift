@@ -24,9 +24,6 @@ class TaskTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    
-    
-    
     @IBAction func AddButtonAction(_ sender: Any) {
         let alert = UIAlertController(title: "Новая задача", message: "", preferredStyle: .alert)
         alert.addTextField { textField in
